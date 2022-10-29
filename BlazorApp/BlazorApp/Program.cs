@@ -1,4 +1,7 @@
 using BlazorApp.Data;
+using Blazorise;
+using Blazorise.Bootstrap;
+using Blazorise.Icons.FontAwesome;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
@@ -10,7 +13,10 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 
 builder.Services.AddHttpClient();
-
+builder.Services
+   .AddBlazorise()
+   .AddBootstrapProviders()
+   .AddFontAwesomeIcons();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
