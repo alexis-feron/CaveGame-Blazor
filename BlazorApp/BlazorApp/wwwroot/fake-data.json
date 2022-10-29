@@ -1,0 +1,382 @@
+[
+  {
+    "id": 1,
+    "displayname": "Tripsch",
+    "name": "tripsch",
+    "stacksize": 24,
+    "maxdurability": 3,
+    "enchantcategories": [
+      "armor_head",
+      "armor_chest"
+    ],
+    "repairwith": [],
+    "createddate": "2017-05-28",
+    "updateddate": null
+  },
+  {
+    "id": 2,
+    "displayname": "Marketoid",
+    "name": "marketoid",
+    "stacksize": 63,
+    "maxdurability": 8,
+    "enchantcategories": [
+      "armor_chest",
+      "armor_chest"
+    ],
+    "repairwith": [],
+    "createddate": "2022-04-11",
+    "updateddate": "2021-02-02"
+  },
+  {
+    "id": 3,
+    "displayname": "Medifax",
+    "name": "medifax",
+    "stacksize": 49,
+    "maxdurability": 51,
+    "enchantcategories": [],
+    "repairwith": [],
+    "createddate": "2014-06-17",
+    "updateddate": null
+  },
+  {
+    "id": 4,
+    "displayname": "Otherway",
+    "name": "otherway",
+    "stacksize": 63,
+    "maxdurability": 1,
+    "enchantcategories": [
+      "vanishable",
+      "digger",
+      "breakable"
+    ],
+    "repairwith": [],
+    "createddate": "2020-01-12",
+    "updateddate": "2021-05-25"
+  },
+  {
+    "id": 5,
+    "displayname": "Bedlam",
+    "name": "bedlam",
+    "stacksize": 64,
+    "maxdurability": 94,
+    "enchantcategories": [
+      "digger"
+    ],
+    "repairwith": [
+      "acacia_planks"
+    ],
+    "createddate": "2017-11-16",
+    "updateddate": "2022-05-24"
+  },
+  {
+    "id": 6,
+    "displayname": "Zenco",
+    "name": "zenco",
+    "stacksize": 56,
+    "maxdurability": 110,
+    "enchantcategories": [
+      "weapon",
+      "vanishable"
+    ],
+    "repairwith": [],
+    "createddate": "2022-04-19",
+    "updateddate": "2021-06-09"
+  },
+  {
+    "id": 7,
+    "displayname": "Cowtown",
+    "name": "cowtown",
+    "stacksize": 19,
+    "maxdurability": 23,
+    "enchantcategories": [],
+    "repairwith": [
+      "birch_planks"
+    ],
+    "createddate": "2014-04-05",
+    "updateddate": null
+  },
+  {
+    "id": 8,
+    "displayname": "Ziggles",
+    "name": "ziggles",
+    "stacksize": 25,
+    "maxdurability": 42,
+    "enchantcategories": [
+      "digger",
+      "armor_chest",
+      "digger"
+    ],
+    "repairwith": [],
+    "createddate": "2017-09-03",
+    "updateddate": null
+  },
+  {
+    "id": 9,
+    "displayname": "Ovation",
+    "name": "ovation",
+    "stacksize": 39,
+    "maxdurability": 84,
+    "enchantcategories": [
+      "armor",
+      "armor_chest"
+    ],
+    "repairwith": [],
+    "createddate": "2017-01-19",
+    "updateddate": null
+  },
+  {
+    "id": 10,
+    "displayname": "Radiantix",
+    "name": "radiantix",
+    "stacksize": 30,
+    "maxdurability": 46,
+    "enchantcategories": [
+      "weapon"
+    ],
+    "repairwith": [
+      "warped_planks"
+    ],
+    "createddate": "2015-02-14",
+    "updateddate": "2017-07-30"
+  },
+  {
+    "id": 11,
+    "displayname": "Rockyard",
+    "name": "rockyard",
+    "stacksize": 4,
+    "maxdurability": 50,
+    "enchantcategories": [
+      "vanishable",
+      "breakable",
+      "breakable"
+    ],
+    "repairwith": [
+      "warped_planks",
+      "spruce_planks"
+    ],
+    "createddate": "2017-04-15",
+    "updateddate": "2019-12-08"
+  },
+  {
+    "id": 12,
+    "displayname": "Lotron",
+    "name": "lotron",
+    "stacksize": 6,
+    "maxdurability": 43,
+    "enchantcategories": [
+      "breakable",
+      "armor_chest"
+    ],
+    "repairwith": [
+      "birch_planks"
+    ],
+    "createddate": "2022-07-24",
+    "updateddate": null
+  },
+  {
+    "id": 13,
+    "displayname": "Corepan",
+    "name": "corepan",
+    "stacksize": 38,
+    "maxdurability": 89,
+    "enchantcategories": [
+      "vanishable"
+    ],
+    "repairwith": [
+      "warped_planks",
+      "warped_planks"
+    ],
+    "createddate": "2015-11-23",
+    "updateddate": null
+  },
+  {
+    "id": 14,
+    "displayname": "Enthaze",
+    "name": "enthaze",
+    "stacksize": 11,
+    "maxdurability": 112,
+    "enchantcategories": [
+      "vanishable"
+    ],
+    "repairwith": [
+      "crimson_planks"
+    ],
+    "createddate": "2020-06-06",
+    "updateddate": "2021-10-23"
+  },
+  {
+    "id": 15,
+    "displayname": "Miraclis",
+    "name": "miraclis",
+    "stacksize": 4,
+    "maxdurability": 97,
+    "enchantcategories": [
+      "digger",
+      "armor",
+      "armor_chest"
+    ],
+    "repairwith": [
+      "warped_planks"
+    ],
+    "createddate": "2019-07-13",
+    "updateddate": null
+  },
+  {
+    "id": 16,
+    "displayname": "Comverges",
+    "name": "comverges",
+    "stacksize": 35,
+    "maxdurability": 50,
+    "enchantcategories": [
+      "armor_chest",
+      "weapon",
+      "armor_chest"
+    ],
+    "repairwith": [
+      "dark_oak_planks",
+      "dark_oak_planks"
+    ],
+    "createddate": "2015-07-09",
+    "updateddate": null
+  },
+  {
+    "id": 17,
+    "displayname": "Enomen",
+    "name": "enomen",
+    "stacksize": 29,
+    "maxdurability": 110,
+    "enchantcategories": [
+      "armor_head"
+    ],
+    "repairwith": [
+      "oak_planks",
+      "acacia_planks"
+    ],
+    "createddate": "2019-12-14",
+    "updateddate": null
+  },
+  {
+    "id": 18,
+    "displayname": "Xymonk",
+    "name": "xymonk",
+    "stacksize": 40,
+    "maxdurability": 63,
+    "enchantcategories": [
+      "vanishable",
+      "armor"
+    ],
+    "repairwith": [
+      "dark_oak_planks"
+    ],
+    "createddate": "2016-07-27",
+    "updateddate": "2019-06-02"
+  },
+  {
+    "id": 19,
+    "displayname": "Nspire",
+    "name": "nspire",
+    "stacksize": 53,
+    "maxdurability": 76,
+    "enchantcategories": [
+      "weapon",
+      "weapon",
+      "breakable"
+    ],
+    "repairwith": [
+      "oak_planks",
+      "jungle_planks"
+    ],
+    "createddate": "2016-04-29",
+    "updateddate": "2017-05-15"
+  },
+  {
+    "id": 20,
+    "displayname": "Lyrichord",
+    "name": "lyrichord",
+    "stacksize": 26,
+    "maxdurability": 92,
+    "enchantcategories": [
+      "vanishable"
+    ],
+    "repairwith": [
+      "jungle_planks"
+    ],
+    "createddate": "2020-09-25",
+    "updateddate": null
+  },
+  {
+    "id": 21,
+    "displayname": "Accusage",
+    "name": "accusage",
+    "stacksize": 22,
+    "maxdurability": 37,
+    "enchantcategories": [],
+    "repairwith": [],
+    "createddate": "2017-07-17",
+    "updateddate": "2015-04-22"
+  },
+  {
+    "id": 22,
+    "displayname": "Pyramis",
+    "name": "pyramis",
+    "stacksize": 20,
+    "maxdurability": 98,
+    "enchantcategories": [
+      "digger"
+    ],
+    "repairwith": [
+      "dark_oak_planks",
+      "jungle_planks"
+    ],
+    "createddate": "2017-12-29",
+    "updateddate": "2014-09-22"
+  },
+  {
+    "id": 23,
+    "displayname": "Tsunamia",
+    "name": "tsunamia",
+    "stacksize": 60,
+    "maxdurability": 89,
+    "enchantcategories": [
+      "digger",
+      "armor_head",
+      "digger"
+    ],
+    "repairwith": [
+      "warped_planks",
+      "spruce_planks"
+    ],
+    "createddate": "2017-08-10",
+    "updateddate": "2020-02-02"
+  },
+  {
+    "id": 24,
+    "displayname": "Hivedom",
+    "name": "hivedom",
+    "stacksize": 38,
+    "maxdurability": 108,
+    "enchantcategories": [
+      "vanishable"
+    ],
+    "repairwith": [],
+    "createddate": "2017-11-24",
+    "updateddate": null
+  },
+  {
+    "id": 25,
+    "displayname": "Fossiel",
+    "name": "fossiel",
+    "stacksize": 13,
+    "maxdurability": 30,
+    "enchantcategories": [
+      "armor_chest",
+      "armor_chest",
+      "weapon"
+    ],
+    "repairwith": [
+      "warped_planks"
+    ],
+    "createddate": "2017-06-10",
+    "updateddate": null
+  }
+]
