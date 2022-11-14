@@ -1,4 +1,5 @@
 using BlazorApp.Data;
+using Blazored.LocalStorage;
 using Blazorise;
 using Blazorise.Bootstrap;
 using Blazorise.Icons.FontAwesome;
@@ -18,6 +19,8 @@ builder.Services
    .AddBlazorise()
    .AddBootstrapProviders()
    .AddFontAwesomeIcons();
+
+builder.Services.AddBlazoredLocalStorage();
 
 var app = builder.Build();
 
