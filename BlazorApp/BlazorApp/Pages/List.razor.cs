@@ -18,6 +18,9 @@ namespace BlazorApp.Pages
         public ILocalStorageService LocalStorage { get; set; }
 
         [Inject]
+        public IWebHostEnvironment WebHostEnvironment { get; set; }
+
+        [Inject]
         public NavigationManager NavigationManager { get; set; }
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
