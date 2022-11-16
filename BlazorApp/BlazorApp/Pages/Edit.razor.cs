@@ -1,13 +1,15 @@
 ﻿using BlazorApp.Model;
 using BlazorApp.Services;
-using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 
 namespace BlazorApp.Pages
 {
-    public partial class Add
+    public partial class Edit
     {
+        [Parameter]
+        public int Id { get; set; }
+
         /// <summary>
         /// The default enchant categories.
         /// </summary>
@@ -33,9 +35,37 @@ namespace BlazorApp.Pages
         [Inject]
         public NavigationManager NavigationManager { get; set; }
 
+        [Inject]
+        public IWebHostEnvironment WebHostEnvironment { get; set; }
+
+        protected override async Task OnInitializedAsync()
+        {
+            var item = await DataService.GetById(Id);
+
+            var fileContent = await File.ReadAllBytesAsync($"{WebHostEnvironment.WebRootPath}/images/default.png");
+
+            if (File.Exists($"{WebHostEnvironment.WebRootPath}/images/{itemModel.Name}.png"))
+            {
+                fileContent = await File.ReadAllBytesAsync($"{WebHostEnvironment.WebRootPath}/images/{item.Name}.png");
+            }
+
+            // Set the model with the item
+            itemModel = new ItemModel
+            {
+                Id = item.Id,
+                DisplayName = item.DisplayName,
+                Name = item.Name,
+                RepairWith = item.RepairWith,
+                EnchantCategories = item.EnchantCategories,
+                MaxDurability = item.MaxDurability,
+                StackSize = item.StackSize,
+                ImageContent = fileContent
+            };
+        }
+
         private async void HandleValidSubmit()
         {
-            await DataService.Add(itemModel);
+            await DataService.Update(Id, itemModel);
 
             NavigationManager.NavigateTo("list");
         }
