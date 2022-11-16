@@ -6,11 +6,16 @@ using Blazored.Modal;
 using Blazored.Modal.Services;
 using Blazorise.DataGrid;
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 
 namespace BlazorApp.Pages
 {
     public partial class List
     {
+
+        [Inject]
+        public IStringLocalizer<List> Localizer { get; set; }
+
         [Inject]
         public NavigationManager NavigationManager { get; set; }
 
