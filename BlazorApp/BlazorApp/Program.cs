@@ -1,4 +1,6 @@
 using BlazorApp.Data;
+using BlazorApp.Services;
+using Blazored.LocalStorage;
 using Blazorise;
 using Blazorise.Bootstrap;
 using Blazorise.Icons.FontAwesome;
@@ -12,11 +14,16 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 
+builder.Services.AddScoped<IDataService, DataLocalService>();
+
 builder.Services.AddHttpClient();
 builder.Services
    .AddBlazorise()
    .AddBootstrapProviders()
    .AddFontAwesomeIcons();
+
+builder.Services.AddBlazoredLocalStorage();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
