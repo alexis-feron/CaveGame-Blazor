@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using System.Globalization
+@using BlazorApp.Component
 
 <PageTitle>Index</PageTitle>
 
@@ -12,3 +13,7 @@ Welcome to your new app.
 </p>
 
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+<div>
+    <Crafting Items="Items" Recipes="Recipes" />
+</div>
