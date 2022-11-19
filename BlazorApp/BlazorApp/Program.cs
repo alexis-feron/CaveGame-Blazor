@@ -20,6 +20,7 @@ builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddScoped<IDataService, DataLocalService>();
 builder.Services.AddHttpClient();
 builder.Services.AddBlazoredModal();
+builder.Services.AddScoped<IDataService, DataApiService>();
 builder.Services
    .AddBlazorise()
    .AddBootstrapProviders()
