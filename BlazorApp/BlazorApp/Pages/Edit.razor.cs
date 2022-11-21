@@ -44,11 +44,6 @@ namespace BlazorApp.Pages
 
             var fileContent = await File.ReadAllBytesAsync($"{WebHostEnvironment.WebRootPath}/images/default.png");
 
-            if (File.Exists($"{WebHostEnvironment.WebRootPath}/images/{itemModel.Name}.png"))
-            {
-                fileContent = await File.ReadAllBytesAsync($"{WebHostEnvironment.WebRootPath}/images/{item.Name}.png");
-            }
-
             // Set the model with the item
             itemModel = new ItemModel
             {

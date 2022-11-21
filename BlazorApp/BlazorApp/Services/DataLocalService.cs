@@ -69,6 +69,17 @@ namespace BlazorApp.Services
 
         public async Task<int> Count()
         {
+            // Load data from the local storage
+            var currentData = await _localStorage.GetItemAsync<Item[]>("data");
+
+            // Check if data exist in the local storage
+            if (currentData == null)
+            {
+                // this code add in the local storage the fake data
+                var originalData = await _http.GetFromJsonAsync<Item[]>($"{_navigationManager.BaseUri}fake-data.json");
+                await _localStorage.SetItemAsync("data", originalData);
+            }
+
             return (await _localStorage.GetItemAsync<Item[]>("data")).Length;
         }
 
@@ -120,30 +131,30 @@ namespace BlazorApp.Services
             }
 
             // Save the image
-            var imagePathInfo = new DirectoryInfo($"{_webHostEnvironment.WebRootPath}/images");
+    var imagePathInfo = new DirectoryInfo($"{_webHostEnvironment.WebRootPath}/images");
 
-            // Check if the folder "images" exist
-            if (!imagePathInfo.Exists)
-            {
-                imagePathInfo.Create();
-            }
+    // Check if the folder "images" exist
+    if (!imagePathInfo.Exists)
+    {
+        imagePathInfo.Create();
+    }
 
-            // Delete the previous image
-            if (item.Name != model.Name)
-            {
-                var oldFileName = new FileInfo($"{imagePathInfo}/{item.Name}.png");
+    // Delete the previous image
+    if (item.Name != model.Name)
+    {
+        var oldFileName = new FileInfo($"{imagePathInfo}/{item.Name}.png");
 
-                if (oldFileName.Exists)
-                {
-                    File.Delete(oldFileName.FullName);
-                }
-            }
+        if (oldFileName.Exists)
+        {
+            File.Delete(oldFileName.FullName);
+        }
+    }
 
-            // Determine the image name
-            var fileName = new FileInfo($"{imagePathInfo}/{model.Name}.png");
+    // Determine the image name
+    var fileName = new FileInfo($"{imagePathInfo}/{model.Name}.png");
 
-            // Write the file content
-            await File.WriteAllBytesAsync(fileName.FullName, model.ImageContent);
+    // Write the file content
+    await File.WriteAllBytesAsync(fileName.FullName, model.ImageContent);
 
             ItemFactory.Update(item, model);
 
@@ -170,15 +181,6 @@ namespace BlazorApp.Services
 
             // Delete item in
             currentData.Remove(item);
-
-            // Delete the image
-            var imagePathInfo = new DirectoryInfo($"{_webHostEnvironment.WebRootPath}/images");
-            var fileName = new FileInfo($"{imagePathInfo}/{item.Name}.png");
-
-            if (fileName.Exists)
-            {
-                File.Delete(fileName.FullName);
-            }
 
             // Save the data
             await _localStorage.SetItemAsync("data", currentData);

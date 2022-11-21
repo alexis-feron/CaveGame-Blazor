@@ -17,7 +17,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
-builder.Services.AddScoped<IDataService, DataLocalService>();
 builder.Services.AddHttpClient();
 builder.Services.AddBlazoredModal();
 builder.Services.AddScoped<IDataService, DataApiService>();
