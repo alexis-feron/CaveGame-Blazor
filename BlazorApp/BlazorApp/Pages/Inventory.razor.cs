@@ -11,7 +11,7 @@ namespace BlazorApp.Pages
 {
     public partial class Inventory
     {
-
+        string SearchTerm { get; set; } = "";
         [Inject]
         public IStringLocalizer<List> Localizer { get; set; }
 

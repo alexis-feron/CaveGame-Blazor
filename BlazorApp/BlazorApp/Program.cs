@@ -4,8 +4,6 @@ using Blazored.LocalStorage;
 using Blazorise;
 using Blazorise.Bootstrap;
 using Blazorise.Icons.FontAwesome;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using Blazored.Modal;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;

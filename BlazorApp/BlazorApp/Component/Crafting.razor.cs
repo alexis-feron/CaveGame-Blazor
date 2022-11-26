@@ -76,5 +76,6 @@ namespace BlazorApp.Component
         {
             JavaScriptRuntime.InvokeVoidAsync("Crafting.AddActions", e.NewItems);
         }
+
     }
 }
