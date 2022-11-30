@@ -2,6 +2,7 @@
 using BlazorApp.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.Extensions.Localization;
 
 namespace BlazorApp.Pages
 {
@@ -9,6 +10,9 @@ namespace BlazorApp.Pages
     {
         [Parameter]
         public int Id { get; set; }
+
+        [Inject]
+        public IStringLocalizer<List> Localizer { get; set; }
 
         /// <summary>
         /// The default enchant categories.

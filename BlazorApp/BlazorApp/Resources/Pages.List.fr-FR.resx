@@ -117,7 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Title" xml:space="preserve">
+  <data name="Accept Condition" xml:space="preserve">
+    <value>Condition d'acceptation</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="Are you sure you want to delete" xml:space="preserve">
+    <value>Etes-vous sûr que vous voulez supprimer</value>
+  </data>
+  <data name="Available items:" xml:space="preserve">
+    <value>Éléments disponibles</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="Craft" xml:space="preserve">
+    <value>Fabrication</value>
+  </data>
+  <data name="Crafting table" xml:space="preserve">
+    <value>Établi</value>
+  </data>
+  <data name="Created date" xml:space="preserve">
+    <value>Date de création</value>
+  </data>
+  <data name="Current Item image" xml:space="preserve">
+    <value>Image actuelle de l'élément</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="Display name" xml:space="preserve">
+    <value>Nom affiché</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Édition</value>
+  </data>
+  <data name="Enchant categories" xml:space="preserve">
+    <value>Catégorie d'enchantement</value>
+  </data>
+  <data name="Hello, world!" xml:space="preserve">
+    <value>Salut !</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Inventaire</value>
+  </data>
+  <data name="Item image" xml:space="preserve">
+    <value>Image de l'élément</value>
+  </data>
+  <data name="Item List" xml:space="preserve">
     <value>Liste des éléments</value>
+  </data>
+  <data name="List of items" xml:space="preserve">
+    <value>Liste d'éléments</value>
+  </data>
+  <data name="Maximum durability" xml:space="preserve">
+    <value>Durabilités</value>
+  </data>
+  <data name="My inventory" xml:space="preserve">
+    <value>Mon inventaire</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="Recipe" xml:space="preserve">
+    <value>Recette</value>
+  </data>
+  <data name="Repair with" xml:space="preserve">
+    <value>Se répare avec</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Résultat</value>
+  </data>
+  <data name="Search:" xml:space="preserve">
+    <value>Rechercher :</value>
+  </data>
+  <data name="Stack size" xml:space="preserve">
+    <value>Taille de pile</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Valider</value>
+  </data>
+  <data name="Welcome to Minecraft." xml:space="preserve">
+    <value>Bienvenue sur Minecraft</value>
   </data>
 </root>

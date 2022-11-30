@@ -2,11 +2,11 @@
 @using BlazorApp.Model
 @using BlazorApp.Component
 
-<PageTitle>Inventory</PageTitle>
+<PageTitle>@Localizer["Inventory"]</PageTitle>
 
 <div class="container">
   <div class="left">
-    <h3>My inventory</h3>
+    <h3>@Localizer["My inventory"]</h3>
         <div class="inventory">
             <CraftingItem Index="0"/>
             <CraftingItem Index="1"/>
@@ -35,8 +35,8 @@
         </div>
   </div>
   <div class="right">
-      <h3>List of items</h3>
-      <h5>Search: <input @bind="SearchTerm" @bind:event="oninput" />  <span class="oi oi-magnifying-glass" aria-hidden="true"></span> </h5>
+      <h3>@Localizer["List of items"]</h3>
+      <h5>@Localizer["Search:"] <input @bind="SearchTerm" @bind:event="oninput" />  <span class="oi oi-magnifying-glass" aria-hidden="true"></span> </h5>
       <DataGrid TItem="Item"
                 Data="@items"
                 ReadData="@OnReadData"

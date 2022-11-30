@@ -1,6 +1,6 @@
 ﻿@page "/edit/{Id:int}"
 
-<h3>Edit</h3>
+<h3>@Localizer["Edit"]</h3>
 
 <EditForm Model="@itemModel" OnValidSubmit="@HandleValidSubmit">
     <DataAnnotationsValidator />
@@ -8,30 +8,30 @@
 
     <p>
         <label for="display-name">
-            Display name:
+            @Localizer["Display name"]:
             <InputText id="display-name" @bind-Value="itemModel.DisplayName" />
         </label>
     </p>
     <p>
         <label for="name">
-            Name:
+            @Localizer["Name"]:
             <InputText id="name" @bind-Value="itemModel.Name" />
         </label>
     </p>
     <p>
         <label for="stack-size">
-            Stack size:
+            @Localizer["Stack size"]:
             <InputNumber id="stack-size" @bind-Value="itemModel.StackSize" />
         </label>
     </p>
     <p>
         <label for="max-durability">
-            Max durability:
+            @Localizer["Max durability"]:
             <InputNumber id="max-durability" @bind-Value="itemModel.MaxDurability" />
         </label>
     </p>
     <p>
-        Enchant categories:
+        @Localizer["Enchant categories"]:
         <div>
             @foreach (var item in enchantCategories)
             {
@@ -42,7 +42,7 @@
         </div>
     </p>
     <p>
-        Repair with:
+        @Localizer["Repair with"]:
         <div>
             @foreach (var item in repairWith)
             {
@@ -54,22 +54,22 @@
     </p>
     <p>
         <label>
-            Current Item image:
+            @Localizer["Current Item image"]:
             <img src="data:image/png;base64, @(itemModel.ImageBase64)" class="img-thumbnail" title="@itemModel.DisplayName" alt="@itemModel.DisplayName" style="min-width: 50px; max-width: 150px"/>
         </label>
     </p>
     <p>
         <label>
-            Item image:
+            @Localizer["Item image"]:
             <InputFile OnChange="@LoadImage" accept=".png" />
         </label>
     </p>
     <p>
         <label>
-            Accept Condition:
+            @Localizer["Accept Condition"]:
             <InputCheckbox @bind-Value="itemModel.AcceptCondition" />
         </label>
     </p>
 
-    <button type="submit">Submit</button>
+    <button type="submit">@Localizer["Submit"]</button>
 </EditForm>

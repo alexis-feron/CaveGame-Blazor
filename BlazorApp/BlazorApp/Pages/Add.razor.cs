@@ -3,6 +3,7 @@ using BlazorApp.Services;
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.Extensions.Localization;
 
 namespace BlazorApp.Pages
 {
@@ -12,6 +13,9 @@ namespace BlazorApp.Pages
         /// The default enchant categories.
         /// </summary>
         private List<string> enchantCategories = new List<string>() { "armor", "armor_head", "armor_chest", "weapon", "digger", "breakable", "vanishable" };
+
+        [Inject]
+        public IStringLocalizer<List> Localizer { get; set; }
 
         /// <summary>
         /// The current item model

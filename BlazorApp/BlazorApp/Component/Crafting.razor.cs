@@ -1,5 +1,7 @@
 ﻿using BlazorApp.Model;
+using BlazorApp.Pages;
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 using Microsoft.JSInterop;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -9,6 +11,9 @@ namespace BlazorApp.Component
     public partial class Crafting
     {
         private Item _recipeResult;
+
+        [Inject]
+        public IStringLocalizer<List> Localizer { get; set; }
 
         public Crafting()
         {

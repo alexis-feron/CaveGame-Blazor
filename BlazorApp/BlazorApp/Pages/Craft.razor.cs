@@ -2,6 +2,7 @@
 using BlazorApp.Model;
 using BlazorApp.Services;
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 
 namespace BlazorApp.Pages
 {
@@ -9,6 +10,9 @@ namespace BlazorApp.Pages
     {
         [Inject]
         public IDataService DataService { get; set; }
+
+        [Inject]
+        public IStringLocalizer<List> Localizer { get; set; }
 
         public List<Item> Items { get; set; } = new List<Item>();
 

@@ -1,8 +1,10 @@
 ﻿using BlazorApp.Model;
+using BlazorApp.Pages;
 using BlazorApp.Services;
 using Blazored.Modal;
 using Blazored.Modal.Services;
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 
 namespace BlazorApp.Modals
 {
@@ -10,6 +12,9 @@ namespace BlazorApp.Modals
     {
         [CascadingParameter]
         public BlazoredModalInstance ModalInstance { get; set; }
+
+        [Inject]
+        public IStringLocalizer<List> Localizer { get; set; }
 
         [Inject]
         public IDataService DataService { get; set; }

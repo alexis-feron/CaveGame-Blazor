@@ -1,7 +1,6 @@
 ﻿using BlazorApp.Modals;
 using BlazorApp.Model;
 using BlazorApp.Services;
-using Blazored.LocalStorage;
 using Blazored.Modal;
 using Blazored.Modal.Services;
 using Blazorise.DataGrid;
@@ -50,7 +49,7 @@ namespace BlazorApp.Pages
             var parameters = new ModalParameters();
             parameters.Add(nameof(Item.Id), id);
 
-            var modal = Modal.Show<DeleteConfirmation>("Delete Confirmation", parameters);
+            var modal = Modal.Show<DeleteConfirmation>("Confirmation", parameters);
             var result = await modal.Result;
 
             if (result.Cancelled)
