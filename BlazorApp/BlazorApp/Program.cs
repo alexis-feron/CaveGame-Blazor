@@ -8,6 +8,7 @@ using Blazored.Modal;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,9 @@ builder.Services
    .AddFontAwesomeIcons();
 
 builder.Services.AddBlazoredLocalStorage();
+
+builder.Logging.AddConfiguration(builder.Configuration.GetSection("Logging"));
+
 // Add the controller of the app
 builder.Services.AddControllers();
 
