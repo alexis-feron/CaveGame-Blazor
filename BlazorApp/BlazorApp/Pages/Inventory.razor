@@ -8,35 +8,14 @@
   <div class="left">
     <h3>@Localizer["My inventory"]</h3>
         <div class="inventory">
-            <CraftingItem Index="0"/>
-            <CraftingItem Index="1"/>
-            <CraftingItem Index="2"/>
-            <CraftingItem Index="3"/>
-            <CraftingItem Index="4"/>
-            <CraftingItem Index="5"/>
-            <CraftingItem Index="6"/>
-            <CraftingItem Index="7"/>
-            <CraftingItem Index="8"/>
-            <CraftingItem Index="9"/>
-            <CraftingItem Index="10"/>
-            <CraftingItem Index="11"/>
-            <CraftingItem Index="12"/>
-            <CraftingItem Index="13"/>
-            <CraftingItem Index="14"/>
-            <CraftingItem Index="15"/>
-            <CraftingItem Index="16"/>
-            <CraftingItem Index="17"/>
-            <CraftingItem Index="18"/>
-            <CraftingItem Index="19"/>
-            <CraftingItem Index="20"/>
-            <CraftingItem Index="21"/>
-            <CraftingItem Index="22"/>
-            <CraftingItem Index="23"/>
+            @for(int i=0;i<18;i++){
+                <CraftingItem Index="i"/>
+            }
         </div>
   </div>
   <div class="right">
       <h3>@Localizer["List of items"]</h3>
-      <h5>@Localizer["Search:"] <input @bind="SearchTerm" @bind:event="oninput" />  <span class="oi oi-magnifying-glass" aria-hidden="true"></span> </h5>
+      <h5>@Localizer["Search:"] <input type="text" @bind="SearchTerm"/> <button type="button" @onclick="() => OnInput()"><i class="oi oi-magnifying-glass"></i></button></h5>
       <DataGrid TItem="Item"
                 Data="@items"
                 ReadData="@OnReadData"

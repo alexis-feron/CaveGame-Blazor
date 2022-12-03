@@ -1,7 +1,5 @@
-﻿using BlazorApp.Modals;
-using BlazorApp.Model;
+﻿using BlazorApp.Model;
 using BlazorApp.Services;
-using Blazored.Modal;
 using Blazored.Modal.Services;
 using Blazorise.DataGrid;
 using Microsoft.AspNetCore.Components;
@@ -12,7 +10,8 @@ namespace BlazorApp.Pages
     public partial class Inventory
     {
 
-        string SearchTerm { get; set; } = "";
+        string SearchTerm { get; set; }
+
         [Inject]
         public IStringLocalizer<List> Localizer { get; set; }
 
@@ -22,7 +21,8 @@ namespace BlazorApp.Pages
         [CascadingParameter]
         public IModalService Modal { get; set; }
 
-        private List<Item> items;
+        List<Item> items = new List<Item>();
+        List<Item> DataSource = new List<Item>();
 
         private int totalItem;
 
@@ -41,9 +41,16 @@ namespace BlazorApp.Pages
 
             if (!e.CancellationToken.IsCancellationRequested)
             {
+                DataSource = await DataService.List(e.Page, 336);
                 items = await DataService.List(e.Page, e.PageSize);
                 totalItem = await DataService.Count();
             }
+        }
+
+        void OnInput()
+        {
+            items = DataSource.FindAll(e => e.Name.StartsWith(SearchTerm));
+            totalItem = items.Count();
         }
     }
 }
