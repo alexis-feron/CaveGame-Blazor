@@ -22,9 +22,11 @@ namespace BlazorApp.Pages
         public IModalService Modal { get; set; }
 
         List<Item> items = new List<Item>();
+        List<Item> SearchItems = new List<Item>();
         List<Item> DataSource = new List<Item>();
 
         private int totalItem;
+        private object e;
 
         [Inject]
         public IDataService DataService { get; set; }
@@ -39,7 +41,14 @@ namespace BlazorApp.Pages
                 return;
             }
 
-            if (!e.CancellationToken.IsCancellationRequested)
+            if (!String.IsNullOrEmpty(SearchTerm))
+            {
+                SearchItems = DataSource.FindAll(e => e.Name.StartsWith(SearchTerm));
+                items = SearchItems.Skip((e.Page - 1) * e.PageSize).Take(e.PageSize).ToList();
+                totalItem = SearchItems.Count();
+            }
+
+            else
             {
                 DataSource = await DataService.List(e.Page, 336);
                 items = await DataService.List(e.Page, e.PageSize);
@@ -47,10 +56,9 @@ namespace BlazorApp.Pages
             }
         }
 
-        void OnInput()
+        async Task OnInput()
         {
-            items = DataSource.FindAll(e => e.Name.StartsWith(SearchTerm));
-            totalItem = items.Count();
+            await OnReadData(new DataGridReadDataEventArgs<Item>(DataGridReadDataMode.Paging, null, null, 1, 10, 0, 0, new CancellationToken() ));
         }
     }
 }
