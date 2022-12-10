@@ -15,7 +15,7 @@
   </div>
   <div class="right">
       <h3>@Localizer["List of items"]</h3>
-      <h5>@Localizer["Search:"] <input type="text" @bind="SearchTerm"/> <button type="button" @onclick="() => OnInput()"><i class="oi oi-magnifying-glass"></i></button></h5>
+      <h5>@Localizer["Search:"] <input type="text" @bind="SearchTerm"/> <button type="button" @onclick="() => OnInput()"><i class="oi oi-magnifying-glass"></i></button><button type="button" @onclick="() => Sort()"><i class="oi oi-sort-ascending"></i></button></h5>
       <DataGrid TItem="Item"
                 Data="@items"
                 ReadData="@OnReadData"

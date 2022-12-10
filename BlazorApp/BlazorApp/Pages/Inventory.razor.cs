@@ -60,5 +60,10 @@ namespace BlazorApp.Pages
         {
             await OnReadData(new DataGridReadDataEventArgs<Item>(DataGridReadDataMode.Paging, null, null, 1, 10, 0, 0, new CancellationToken() ));
         }
+        async Task Sort()
+        {
+            await OnReadData(new DataGridReadDataEventArgs<Item>(DataGridReadDataMode.Paging, null, null, 1, 10, 0, 0, new CancellationToken()));
+        }
     }
 }
+
