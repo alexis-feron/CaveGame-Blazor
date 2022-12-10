@@ -165,14 +165,14 @@
   <data name="Item image" xml:space="preserve">
     <value>Image de l'élément</value>
   </data>
-  <data name="Item List" xml:space="preserve">
-    <value>Liste des éléments</value>
-  </data>
   <data name="List of items" xml:space="preserve">
     <value>Liste d'éléments</value>
   </data>
   <data name="Maximum durability" xml:space="preserve">
     <value>Durabilités</value>
+  </data>
+  <data name="Modify game elements" xml:space="preserve">
+    <value>Modifier les élement du jeu</value>
   </data>
   <data name="My inventory" xml:space="preserve">
     <value>Mon inventaire</value>
