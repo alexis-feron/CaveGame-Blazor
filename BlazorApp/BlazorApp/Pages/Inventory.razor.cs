@@ -11,6 +11,8 @@ namespace BlazorApp.Pages
     {
 
         string SearchTerm { get; set; }
+        Boolean sort=false;
+        Boolean search = false;
 
         [Inject]
         public IStringLocalizer<List> Localizer { get; set; }
@@ -22,11 +24,9 @@ namespace BlazorApp.Pages
         public IModalService Modal { get; set; }
 
         List<Item> items = new List<Item>();
-        List<Item> SearchItems = new List<Item>();
         List<Item> DataSource = new List<Item>();
 
         private int totalItem;
-        private object e;
 
         [Inject]
         public IDataService DataService { get; set; }
@@ -41,27 +41,49 @@ namespace BlazorApp.Pages
                 return;
             }
 
-            if (!String.IsNullOrEmpty(SearchTerm))
+            if (!String.IsNullOrEmpty(SearchTerm) && search==true)
             {
-                SearchItems = DataSource.FindAll(e => e.Name.StartsWith(SearchTerm));
-                items = SearchItems.Skip((e.Page - 1) * e.PageSize).Take(e.PageSize).ToList();
-                totalItem = SearchItems.Count();
+                DataSource = DataSource.FindAll(e => e.Name.StartsWith(SearchTerm));
+                if (sort == true)
+                {
+                    DataSource = DataSource.OrderBy(o => o.DisplayName).ToList();
+                }
+                items = DataSource.Skip((e.Page - 1) * e.PageSize).Take(e.PageSize).ToList();
+                totalItem = DataSource.Count();
+                search = false;
             }
 
             else
             {
-                DataSource = await DataService.List(e.Page, 336);
-                items = await DataService.List(e.Page, e.PageSize);
-                totalItem = await DataService.Count();
+                if (!String.IsNullOrEmpty(SearchTerm)){
+                    if (sort == true)
+                    {
+                        DataSource = DataSource.OrderBy(o => o.DisplayName).ToList();
+                    }
+                    items = DataSource.Skip((e.Page - 1) * e.PageSize).Take(e.PageSize).ToList();
+                    totalItem = DataSource.Count();
+                }
+                else {
+                    DataSource = await DataService.List(e.Page, 336);
+                    if (sort == true)
+                    {
+                        DataSource = DataSource.OrderBy(o => o.DisplayName).ToList();
+                    }
+                    items = DataSource.Skip((e.Page - 1) * e.PageSize).Take(e.PageSize).ToList();
+                    totalItem = await DataService.Count();
+                }
             }
         }
 
         async Task OnInput()
         {
+            search = true;
             await OnReadData(new DataGridReadDataEventArgs<Item>(DataGridReadDataMode.Paging, null, null, 1, 10, 0, 0, new CancellationToken() ));
         }
+
         async Task Sort()
         {
+            sort = !sort;
             await OnReadData(new DataGridReadDataEventArgs<Item>(DataGridReadDataMode.Paging, null, null, 1, 10, 0, 0, new CancellationToken()));
         }
     }
