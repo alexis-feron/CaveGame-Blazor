@@ -2,14 +2,14 @@
     grid-template-columns: repeat(4,minmax(0,1fr));
     gap: 10px;
     display: grid;
-    width: 286px;
+    width: 370px;
 }
 
 .css-recipe {
     grid-template-columns: repeat(3,minmax(0,1fr));
     gap: 10px;
     display: grid;
-    width: 212px;
+    width: 280px;
 }
 
 .actions {

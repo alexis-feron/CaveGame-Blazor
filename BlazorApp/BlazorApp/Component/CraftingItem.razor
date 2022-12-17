@@ -5,10 +5,19 @@
     @ondragstart="@OnDragStart"
     @ondrop="@OnDrop"
     @ondragenter="@OnDragEnter"
-    @ondragleave="@OnDragLeave">
+    @ondragleave="@OnDragLeave"
+    align="center">
 
     @if (Item != null)
     {
-        @Item.DisplayName
+        @if (!string.IsNullOrWhiteSpace(@Item.ImageBase64))
+        {
+            <img src="data:image/png;base64, @(@Item.ImageBase64)" class="img-thumbnail" title="@Item.DisplayName" alt="@Item.DisplayName" style="min-width: 40px; max-width: 40px" />
+        }
+        else
+        {
+            <img src="images/default.png" class="img-thumbnail" title="@Item.DisplayName" alt="@Item.DisplayName" style="max-width: 40px"/>
+        }
+    @Item.DisplayName
     }
 </div>

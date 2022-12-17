@@ -1,6 +1,11 @@
 ﻿.item {
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
+    max-height:80px;
     border: 1px solid;
     overflow: hidden;
+}
+*{
+    font-size: 14px;
+    display: table-cell;
 }
