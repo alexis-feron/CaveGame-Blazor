@@ -41,38 +41,31 @@ namespace BlazorApp.Pages
                 return;
             }
 
-            if (!String.IsNullOrEmpty(SearchTerm) && search==true)
+            if (!String.IsNullOrEmpty(SearchTerm) && search == true)
             {
+                DataSource = await DataService.List(e.Page, 336);
                 DataSource = DataSource.FindAll(e => e.Name.StartsWith(SearchTerm));
-                if (sort == true)
-                {
-                    DataSource = DataSource.OrderBy(o => o.DisplayName).ToList();
-                }
-                items = DataSource.Skip((e.Page - 1) * e.PageSize).Take(e.PageSize).ToList();
-                totalItem = DataSource.Count();
-                search = false;
+                
             }
 
             else
             {
-                if (!String.IsNullOrEmpty(SearchTerm)){
-                    if (sort == true)
-                    {
-                        DataSource = DataSource.OrderBy(o => o.DisplayName).ToList();
-                    }
-                    items = DataSource.Skip((e.Page - 1) * e.PageSize).Take(e.PageSize).ToList();
-                    totalItem = DataSource.Count();
-                }
-                else {
+                if (String.IsNullOrEmpty(SearchTerm))
+                {
                     DataSource = await DataService.List(e.Page, 336);
-                    if (sort == true)
-                    {
-                        DataSource = DataSource.OrderBy(o => o.DisplayName).ToList();
-                    }
-                    items = DataSource.Skip((e.Page - 1) * e.PageSize).Take(e.PageSize).ToList();
-                    totalItem = await DataService.Count();
                 }
             }
+            if (sort == true)
+            {
+                DataSource = DataSource.OrderBy(o => o.DisplayName).ToList();
+            }
+            else
+            {
+                DataSource=DataSource.OrderBy(o => o.Id).ToList();
+            }
+            items = DataSource.Skip((e.Page - 1) * e.PageSize).Take(e.PageSize).ToList();
+            totalItem = DataSource.Count();
+            search = false;
         }
 
         async Task OnInput()
