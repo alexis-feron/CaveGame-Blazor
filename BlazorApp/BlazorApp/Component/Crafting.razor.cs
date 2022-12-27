@@ -12,9 +12,7 @@ namespace BlazorApp.Component
     {
         private Item _recipeResult;
 
-        [Inject]
-        public IStringLocalizer<List> Localizer { get; set; }
-
+        
         public Crafting()
         {
             Actions = new ObservableCollection<CraftingAction>();
@@ -53,6 +51,9 @@ namespace BlazorApp.Component
         /// </summary>
         [Inject]
         internal IJSRuntime JavaScriptRuntime { get; set; }
+
+        [Inject]
+        public IStringLocalizer<List> Localizer { get; set; }
 
         public void CheckRecipe()
         {

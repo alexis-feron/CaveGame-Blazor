@@ -135,6 +135,9 @@
   <data name="Craft" xml:space="preserve">
     <value>Fabrication</value>
   </data>
+  <data name="Crafting" xml:space="preserve">
+    <value>Fabrication</value>
+  </data>
   <data name="Crafting table" xml:space="preserve">
     <value>Établi</value>
   </data>
@@ -156,8 +159,8 @@
   <data name="Enchant categories" xml:space="preserve">
     <value>Catégorie d'enchantement</value>
   </data>
-  <data name="Hello, world!" xml:space="preserve">
-    <value>Salut !</value>
+  <data name="Home" xml:space="preserve">
+    <value>Accueil</value>
   </data>
   <data name="Inventory" xml:space="preserve">
     <value>Inventaire</value>
@@ -173,6 +176,9 @@
   </data>
   <data name="Modify game elements" xml:space="preserve">
     <value>Modifier les élements du jeu</value>
+  </data>
+  <data name="Mods" xml:space="preserve">
+    <value>Modifications</value>
   </data>
   <data name="My inventory" xml:space="preserve">
     <value>Mon inventaire</value>
