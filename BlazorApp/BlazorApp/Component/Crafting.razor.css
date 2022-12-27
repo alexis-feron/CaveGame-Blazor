@@ -2,18 +2,24 @@
     grid-template-columns: repeat(4,minmax(0,1fr));
     gap: 10px;
     display: grid;
-    width: 370px;
+    width: 350px;
 }
 
 .css-recipe {
     grid-template-columns: repeat(3,minmax(0,1fr));
     gap: 10px;
     display: grid;
-    width: 280px;
+    width: 270px;
 }
 
 .actions {
     border: 1px solid black;
     height: 250px;
     overflow: scroll;
+}
+
+@media (max-width: 1070px) {
+    .row {
+        display: block;
+    }
 }

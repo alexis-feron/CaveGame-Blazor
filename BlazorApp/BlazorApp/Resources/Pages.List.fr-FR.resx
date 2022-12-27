@@ -172,7 +172,7 @@
     <value>Durabilités</value>
   </data>
   <data name="Modify game elements" xml:space="preserve">
-    <value>Modifier les élement du jeu</value>
+    <value>Modifier les élements du jeu</value>
   </data>
   <data name="My inventory" xml:space="preserve">
     <value>Mon inventaire</value>
@@ -198,7 +198,7 @@
   <data name="Submit" xml:space="preserve">
     <value>Valider</value>
   </data>
-  <data name="Welcome to Minecraft." xml:space="preserve">
-    <value>Bienvenue sur Minecraft</value>
+  <data name="Welcome to Cave Game." xml:space="preserve">
+    <value>Bienvenue sur Cave Game.</value>
   </data>
 </root>
