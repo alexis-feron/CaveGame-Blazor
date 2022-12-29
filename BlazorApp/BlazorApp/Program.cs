@@ -17,19 +17,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
-
-builder.Services.AddScoped<IDataService, DataLocalService>();
-
 builder.Services.AddHttpClient();
+builder.Services.AddBlazoredModal();
+builder.Services.AddScoped<IDataService, DataApiService>();
 builder.Services
    .AddBlazorise()
    .AddBootstrapProviders()
    .AddFontAwesomeIcons();
 
 builder.Services.AddBlazoredLocalStorage();
-
-builder.Services.AddBlazoredModal();
-
 // Add the controller of the app
 builder.Services.AddControllers();
 
@@ -46,7 +42,6 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.SupportedCultures = new List<CultureInfo> { new CultureInfo("en-US"), new CultureInfo("fr-FR") };
     options.SupportedUICultures = new List<CultureInfo> { new CultureInfo("en-US"), new CultureInfo("fr-FR") };
 });
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -62,7 +57,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 // Get the current localization options
 var options = ((IApplicationBuilder)app).ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
 
@@ -82,3 +76,4 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();
+

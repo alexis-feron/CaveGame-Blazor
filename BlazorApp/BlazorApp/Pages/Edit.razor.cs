@@ -1,5 +1,4 @@
-﻿using BlazorApp.Factories;
-using BlazorApp.Model;
+﻿using BlazorApp.Model;
 using BlazorApp.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
@@ -44,13 +43,6 @@ namespace BlazorApp.Pages
             var item = await DataService.GetById(Id);
 
             var fileContent = await File.ReadAllBytesAsync($"{WebHostEnvironment.WebRootPath}/images/default.png");
-
-            if (File.Exists($"{WebHostEnvironment.WebRootPath}/images/{itemModel.Name}.png"))
-            {
-                fileContent = await File.ReadAllBytesAsync($"{WebHostEnvironment.WebRootPath}/images/{item.Name}.png");
-            }
-
-            itemModel = ItemFactory.ToModel(item, fileContent);
 
             // Set the model with the item
             itemModel = new ItemModel

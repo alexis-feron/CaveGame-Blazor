@@ -1,4 +1,5 @@
-﻿using BlazorApp.Model;
+﻿using BlazorApp.Component;
+using BlazorApp.Model;
 
 namespace BlazorApp.Services
 {
@@ -15,5 +16,8 @@ namespace BlazorApp.Services
         Task Update(int id, ItemModel model);
 
         Task Delete(int id);
+
+        Task<List<CraftingRecipe>> GetRecipes();
     }
 }
+

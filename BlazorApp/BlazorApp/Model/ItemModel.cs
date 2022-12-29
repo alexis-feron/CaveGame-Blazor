@@ -33,5 +33,7 @@ namespace BlazorApp.Model
 
         [Required(ErrorMessage = "The image of the item is mandatory!")]
         public byte[] ImageContent { get; set; }
+
+        public string ImageBase64 { get; set; }
     }
 }

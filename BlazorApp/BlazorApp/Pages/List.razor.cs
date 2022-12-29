@@ -1,6 +1,7 @@
 ﻿using BlazorApp.Modals;
 using BlazorApp.Model;
 using BlazorApp.Services;
+using Blazored.LocalStorage;
 using Blazored.Modal;
 using Blazored.Modal.Services;
 using Blazorise.DataGrid;
@@ -9,12 +10,18 @@ using Microsoft.Extensions.Localization;
 
 namespace BlazorApp.Pages
 {
-
-
     public partial class List
     {
+
         [Inject]
         public IStringLocalizer<List> Localizer { get; set; }
+
+        [Inject]
+        public NavigationManager NavigationManager { get; set; }
+
+        [CascadingParameter]
+        public IModalService Modal { get; set; }
+
         private List<Item> items;
 
         private int totalItem;
@@ -24,12 +31,6 @@ namespace BlazorApp.Pages
 
         [Inject]
         public IWebHostEnvironment WebHostEnvironment { get; set; }
-
-        [Inject]
-        public NavigationManager NavigationManager { get; set; }
-
-        [CascadingParameter]
-        public IModalService Modal { get; set; }
 
         private async Task OnReadData(DataGridReadDataEventArgs<Item> e)
         {
@@ -44,7 +45,6 @@ namespace BlazorApp.Pages
                 totalItem = await DataService.Count();
             }
         }
-
         private async void OnDelete(int id)
         {
             var parameters = new ModalParameters();

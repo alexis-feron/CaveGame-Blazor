@@ -1,5 +1,6 @@
 ﻿using BlazorApp.Model;
 using BlazorApp.Services;
+using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 
