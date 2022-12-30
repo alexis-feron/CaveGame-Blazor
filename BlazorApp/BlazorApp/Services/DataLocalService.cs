@@ -35,34 +35,6 @@ namespace BlazorApp.Services
 
             currentData.Add(ItemFactory.Create(model));
 
-            // Add the item to the current data
-            currentData.Add(new Item
-            {
-                Id = model.Id,
-                DisplayName = model.DisplayName,
-                Name = model.Name,
-                RepairWith = model.RepairWith,
-                EnchantCategories = model.EnchantCategories,
-                MaxDurability = model.MaxDurability,
-                StackSize = model.StackSize,
-                CreatedDate = DateTime.Now
-            });
-
-            // Save the image
-            var imagePathInfo = new DirectoryInfo($"{_webHostEnvironment.WebRootPath}/images");
-
-            // Check if the folder "images" exist
-            if (!imagePathInfo.Exists)
-            {
-                imagePathInfo.Create();
-            }
-
-            // Determine the image name
-            var fileName = new FileInfo($"{imagePathInfo}/{model.Name}.png");
-
-            // Write the file content
-            await File.WriteAllBytesAsync(fileName.FullName, model.ImageContent);
-
             // Save the data
             await _localStorage.SetItemAsync("data", currentData);
         }
@@ -130,32 +102,7 @@ namespace BlazorApp.Services
                 throw new Exception($"Unable to found the item with ID: {id}");
             }
 
-            // Save the image
-    var imagePathInfo = new DirectoryInfo($"{_webHostEnvironment.WebRootPath}/images");
-
-    // Check if the folder "images" exist
-    if (!imagePathInfo.Exists)
-    {
-        imagePathInfo.Create();
-    }
-
-    // Delete the previous image
-    if (item.Name != model.Name)
-    {
-        var oldFileName = new FileInfo($"{imagePathInfo}/{item.Name}.png");
-
-        if (oldFileName.Exists)
-        {
-            File.Delete(oldFileName.FullName);
-        }
-    }
-
-    // Determine the image name
-    var fileName = new FileInfo($"{imagePathInfo}/{model.Name}.png");
-
-    // Write the file content
-    await File.WriteAllBytesAsync(fileName.FullName, model.ImageContent);
-
+           
             ItemFactory.Update(item, model);
 
             // Modify the content of the item
