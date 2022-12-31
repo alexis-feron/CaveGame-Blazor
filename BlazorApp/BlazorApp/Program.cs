@@ -26,6 +26,7 @@ builder.Services
 
 builder.Services.AddBlazoredLocalStorage();
 
+//Logs
 builder.Logging.AddConfiguration(builder.Configuration.GetSection("Logging"));
 
 // Add the controller of the app
