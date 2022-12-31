@@ -141,6 +141,9 @@
   <data name="Crafting table" xml:space="preserve">
     <value>Établi</value>
   </data>
+  <data name="Create logs" xml:space="preserve">
+    <value>Créer des journaux</value>
+  </data>
   <data name="Created date" xml:space="preserve">
     <value>Date de création</value>
   </data>
@@ -170,6 +173,9 @@
   </data>
   <data name="List of items" xml:space="preserve">
     <value>Liste d'éléments</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>Registres</value>
   </data>
   <data name="Maximum durability" xml:space="preserve">
     <value>Durabilités</value>

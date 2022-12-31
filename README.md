@@ -14,6 +14,7 @@ Nous avons réalisé une application web côté client sur le thème de minecraf
 - C#
 - HTML
 - CSS
+- JS
 
 ## Installation et utilisation
 
@@ -64,6 +65,7 @@ We made a client-side web application on the theme of minecraft using Blazor. On
 - C#
 - HTML
 - CSS
+- JS
 
 ## Installation and use
 

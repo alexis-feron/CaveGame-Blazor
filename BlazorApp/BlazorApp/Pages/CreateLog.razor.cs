@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 
 namespace BlazorApp.Pages
@@ -7,6 +8,9 @@ namespace BlazorApp.Pages
     {
         [Inject]
         public ILogger<CreateLog> Logger { get; set; }
+
+        [Inject]
+        public IStringLocalizer<List> Localizer { get; set; }
 
         private void CreateLogs()
         {
