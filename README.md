@@ -6,6 +6,7 @@ Projet Blazor réalisé au cours de la 2ème année du Bachelor Universitaire de
 <p>
 Nous avons réalisé une application web côté client sur le thème de minecraft grâce à Blazor. Sur l'application il y a 4 pages: une d'accueil, une page inventaire, une page craft et enfin une page modification.
 </p>
+<img src="assets/accueil.jpg">
 
 
 ## Techologies utilisées  
@@ -34,10 +35,14 @@ dans l'onglet inventaire:
 - changer de page pour voir les éléments suivants
 - glisser les éléments vers notre inventaire
 
+<img src="assets/inventaire.jpg">
+
 dans l'onglet fabrication:
 - voir les élémnts disponibles
 - faire glisser les éléments vers notre établi
 - voir les actions effectuées dans établi
+
+<img src="assets/etabli.jpg">
 
 dans l'onglet modification:
 - voir les éléments avec leurs images, taille, durabilité, catégorie, ce avec quoi celui-ci se répare et date de création
@@ -46,8 +51,10 @@ dans l'onglet modification:
 - supprimer un élément
 - changer de page pour voir la suite des éléments
 
+<img src="assets/modif.jpg">
 
-## --------------------------- English Version ---------------------------
+
+# --------------------------- English Version ---------------------------
 
 # Blazor web app
 
@@ -57,6 +64,8 @@ Blazor project carried out during the 2nd year of the University Bachelor of Tec
 <p>
 We made a client-side web application on the theme of minecraft using Blazor. On the application there are 4 pages: a home page, an inventory page, a craft page and finally a modification page.
 </p>
+
+<img src="assets/accueil.jpg">
 
 
 ## Technologies used
@@ -85,10 +94,14 @@ In the inventory tab:
 - change page to see the following items
 - drag items to our inventory
 
+<img src="assets/inventaire.jpg">
+
 In the crafting tab:
 - see available items
 - drag items to our workbench
 - see actions performed in workbench
+
+<img src="assets/etabli.jpg">
 
 In the edit tab:
 - see the items with their images, size, durability, category, what it repairs with and the date of his creation
@@ -96,4 +109,6 @@ In the edit tab:
 - editor of an element
 - delete an element
 - change page to see the rest of the elements
+
+<img src="assets/modif.jpg">
 
